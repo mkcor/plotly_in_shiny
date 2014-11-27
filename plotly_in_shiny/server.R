@@ -9,7 +9,7 @@ shinyServer(function(input, output) {
     
     ggiris <- qplot(x=Petal.Width, y=Sepal.Length, data=subset_iris, color=Species)
     
-    py <- plotly(username="r_user_guide", key="mw5isa4yqp", base.url="https://plot.ly")  # Open Plotly connection
+    py <- plotly("r_user_guide", "mw5isa4yqp", "https://plot.ly")  # Open Plotly connection
     
     res <- py$ggplotly(ggiris, kwargs=list(filename="Plotly in Shiny", 
                                            fileopt="overwrite", # Overwrite plot in Plotly's website
